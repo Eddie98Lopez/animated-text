@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { StyledApp } from "./App.styles";
+import AnimatedText from "./AnimatedText";
+import "animate.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp className="App">
+      <AnimatedText input="Hello." delay={0} duration={2} />
+      <AnimatedText input="I'm Eddie." delay={2} duration={2} />
+      <AnimatedText input="I'm a designer" delay={4} duration={2} />
+    </StyledApp>
   );
 }
 
